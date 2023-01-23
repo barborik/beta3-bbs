@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "QOjJKuL1zknkVbO7V6QjnWgQyeEruVwIiykUCoBTWoCnXpW5QLlyRL7awoPozLRfQOZ7YAGIyjXWvFSpMTMSSA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Owner\\Desktop\\bbs\\bbs.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Owner\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\3.1.6\\microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",
+    "C:\\Users\\Owner\\.nuget\\packages\\nstack.core\\1.0.7\\nstack.core.1.0.7.nupkg.sha512",
+    "C:\\Users\\Owner\\.nuget\\packages\\ssh.net\\2020.0.2\\ssh.net.2020.0.2.nupkg.sha512",
+    "C:\\Users\\Owner\\.nuget\\packages\\sshnet.security.cryptography\\1.3.0\\sshnet.security.cryptography.1.3.0.nupkg.sha512",
+    "C:\\Users\\Owner\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\Owner\\.nuget\\packages\\terminal.gui\\1.9.0\\terminal.gui.1.9.0.nupkg.sha512"
+  ],
+  "logs": []
+}
