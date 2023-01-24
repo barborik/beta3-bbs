@@ -1,15 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "QOjJKuL1zknkVbO7V6QjnWgQyeEruVwIiykUCoBTWoCnXpW5QLlyRL7awoPozLRfQOZ7YAGIyjXWvFSpMTMSSA==",
+  "dgSpecHash": "cs+g2FmvuyyJJYx/uWmKLGW8zBTEtC+7QgS/VCmBV96t6QtOUqDpuzzvWX58QpEzPExdaHnWFOMakWXaqM51eg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Owner\\Desktop\\bbs\\bbs.csproj",
+  "projectFilePath": "/home/barbo/Desktop/repos/bbs/bbs.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Owner\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\3.1.6\\microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",
-    "C:\\Users\\Owner\\.nuget\\packages\\nstack.core\\1.0.7\\nstack.core.1.0.7.nupkg.sha512",
-    "C:\\Users\\Owner\\.nuget\\packages\\ssh.net\\2020.0.2\\ssh.net.2020.0.2.nupkg.sha512",
-    "C:\\Users\\Owner\\.nuget\\packages\\sshnet.security.cryptography\\1.3.0\\sshnet.security.cryptography.1.3.0.nupkg.sha512",
-    "C:\\Users\\Owner\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
-    "C:\\Users\\Owner\\.nuget\\packages\\terminal.gui\\1.9.0\\terminal.gui.1.9.0.nupkg.sha512"
+    "/home/barbo/.nuget/packages/microsoft.dotnet.platformabstractions/3.1.6/microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",
+    "/home/barbo/.nuget/packages/nstack.core/1.0.7/nstack.core.1.0.7.nupkg.sha512",
+    "/home/barbo/.nuget/packages/system.valuetuple/4.5.0/system.valuetuple.4.5.0.nupkg.sha512",
+    "/home/barbo/.nuget/packages/terminal.gui/1.9.0/terminal.gui.1.9.0.nupkg.sha512",
+    "/home/barbo/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.13/microsoft.aspnetcore.app.ref.6.0.13.nupkg.sha512"
   ],
   "logs": []
 }

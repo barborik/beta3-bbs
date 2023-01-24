@@ -1,7 +1,7 @@
 ﻿namespace BBS
 {
+    using System;
     using Terminal.Gui;
-    using Renci.SshNet;
 
     public class Program
     {
@@ -10,6 +10,7 @@
             /*Application.Init();
             Application.Run(new BBS.Page.Login());
             Application.Shutdown();*/
+            Console.WriteLine("Hello, World!");
         }
     }
 }
