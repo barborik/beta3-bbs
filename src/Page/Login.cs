@@ -14,6 +14,11 @@ namespace BBS.Page
         public Login()
         {
             InitializeComponent();
+
+            exitButton.Clicked += () =>
+            {
+                System.Environment.Exit(0);
+            };
         }
     }
 }

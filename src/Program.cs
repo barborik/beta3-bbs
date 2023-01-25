@@ -1,6 +1,5 @@
-﻿using System;
-using Terminal.Gui;
-using BBS.Entity;
+﻿using Terminal.Gui;
+using BBS.Page;
 
 namespace BBS
 {
@@ -8,12 +7,11 @@ namespace BBS
     {
         static void Main(string[] args)
         {
-            /*Application.Init();
-            Application.Run(new BBS.Page.Login());
-            Application.Shutdown();*/
-            // Console.WriteLine("Hello, World!");
+            Application.Init();
+            Application.QuitKey = Key.Null;
+            Application.Run(new Login());
 
-            using (BBSContext db = new BBSContext())
+            /*using (BBSContext db = new BBSContext())
             {
                 User user = new User { Username = "sysop", PasswordHash = "password", Joined = DateTime.Now };
 
@@ -24,7 +22,7 @@ namespace BBS
 
                 db.Message.Add(message);
                 db.SaveChanges();
-            }
+            }*/
         }
     }
 }

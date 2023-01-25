@@ -19,25 +19,35 @@ namespace BBS.Page {
         
         private Terminal.Gui.ColorScheme whiteOnBlack;
         
-        private Terminal.Gui.Label loginLabel;
+        private Terminal.Gui.ColorScheme greenOnBlack;
+        
+        private Terminal.Gui.ColorScheme blackOnWhite;
+        
+        private Terminal.Gui.Label usernameLabel;
+        
+        private Terminal.Gui.TextField usernameField;
+        
+        private Terminal.Gui.LineView lineView;
+        
+        private Terminal.Gui.Label passwordLabel;
         
         private Terminal.Gui.TextField passwdField;
         
-        private Terminal.Gui.Label passwdLabel;
-        
-        private Terminal.Gui.TextField loginField;
+        private Terminal.Gui.LineView lineView2;
         
         private Terminal.Gui.Button loginButton;
         
-        private Terminal.Gui.Button signUpButton;
+        private Terminal.Gui.Button exitButton;
         
         private void InitializeComponent() {
-            this.signUpButton = new Terminal.Gui.Button();
+            this.exitButton = new Terminal.Gui.Button();
             this.loginButton = new Terminal.Gui.Button();
-            this.loginField = new Terminal.Gui.TextField();
-            this.passwdLabel = new Terminal.Gui.Label();
+            this.lineView2 = new Terminal.Gui.LineView();
             this.passwdField = new Terminal.Gui.TextField();
-            this.loginLabel = new Terminal.Gui.Label();
+            this.passwordLabel = new Terminal.Gui.Label();
+            this.lineView = new Terminal.Gui.LineView();
+            this.usernameField = new Terminal.Gui.TextField();
+            this.usernameLabel = new Terminal.Gui.Label();
             this.greyOnBlack = new Terminal.Gui.ColorScheme();
             this.greyOnBlack.Normal = new Terminal.Gui.Attribute(Terminal.Gui.Color.DarkGray, Terminal.Gui.Color.Black);
             this.greyOnBlack.HotNormal = new Terminal.Gui.Attribute(Terminal.Gui.Color.DarkGray, Terminal.Gui.Color.Black);
@@ -49,7 +59,19 @@ namespace BBS.Page {
             this.whiteOnBlack.HotNormal = new Terminal.Gui.Attribute(Terminal.Gui.Color.White, Terminal.Gui.Color.Black);
             this.whiteOnBlack.Focus = new Terminal.Gui.Attribute(Terminal.Gui.Color.White, Terminal.Gui.Color.Magenta);
             this.whiteOnBlack.HotFocus = new Terminal.Gui.Attribute(Terminal.Gui.Color.White, Terminal.Gui.Color.Magenta);
-            this.whiteOnBlack.Disabled = new Terminal.Gui.Attribute(Terminal.Gui.Color.Black, Terminal.Gui.Color.Black);
+            this.whiteOnBlack.Disabled = new Terminal.Gui.Attribute(Terminal.Gui.Color.White, Terminal.Gui.Color.Black);
+            this.greenOnBlack = new Terminal.Gui.ColorScheme();
+            this.greenOnBlack.Normal = new Terminal.Gui.Attribute(Terminal.Gui.Color.Green, Terminal.Gui.Color.Black);
+            this.greenOnBlack.HotNormal = new Terminal.Gui.Attribute(Terminal.Gui.Color.BrightGreen, Terminal.Gui.Color.Black);
+            this.greenOnBlack.Focus = new Terminal.Gui.Attribute(Terminal.Gui.Color.Green, Terminal.Gui.Color.Magenta);
+            this.greenOnBlack.HotFocus = new Terminal.Gui.Attribute(Terminal.Gui.Color.BrightGreen, Terminal.Gui.Color.Magenta);
+            this.greenOnBlack.Disabled = new Terminal.Gui.Attribute(Terminal.Gui.Color.Gray, Terminal.Gui.Color.Black);
+            this.blackOnWhite = new Terminal.Gui.ColorScheme();
+            this.blackOnWhite.Normal = new Terminal.Gui.Attribute(Terminal.Gui.Color.White, Terminal.Gui.Color.Black);
+            this.blackOnWhite.HotNormal = new Terminal.Gui.Attribute(Terminal.Gui.Color.White, Terminal.Gui.Color.Black);
+            this.blackOnWhite.Focus = new Terminal.Gui.Attribute(Terminal.Gui.Color.White, Terminal.Gui.Color.Black);
+            this.blackOnWhite.HotFocus = new Terminal.Gui.Attribute(Terminal.Gui.Color.White, Terminal.Gui.Color.Black);
+            this.blackOnWhite.Disabled = new Terminal.Gui.Attribute(Terminal.Gui.Color.White, Terminal.Gui.Color.Black);
             this.Width = Dim.Fill(0);
             this.Height = Dim.Fill(0);
             this.X = 0;
@@ -63,62 +85,82 @@ namespace BBS.Page {
             this.Border.DrawMarginFrame = true;
             this.TextAlignment = Terminal.Gui.TextAlignment.Left;
             this.Title = "";
-            this.loginLabel.Width = 4;
-            this.loginLabel.Height = 1;
-            this.loginLabel.X = 45;
-            this.loginLabel.Y = 10;
-            this.loginLabel.ColorScheme = this.whiteOnBlack;
-            this.loginLabel.Data = "loginLabel";
-            this.loginLabel.Text = "login";
-            this.loginLabel.TextAlignment = Terminal.Gui.TextAlignment.Left;
-            this.Add(this.loginLabel);
+            this.usernameLabel.Width = 4;
+            this.usernameLabel.Height = 1;
+            this.usernameLabel.X = Pos.Left(usernameField) - 10;
+            this.usernameLabel.Y = 1;
+            this.usernameLabel.ColorScheme = this.whiteOnBlack;
+            this.usernameLabel.Data = "usernameLabel";
+            this.usernameLabel.Text = "username:";
+            this.usernameLabel.TextAlignment = Terminal.Gui.TextAlignment.Left;
+            this.Add(this.usernameLabel);
+            this.usernameField.Width = 20;
+            this.usernameField.Height = 1;
+            this.usernameField.X = Pos.Percent(50f) - 5;
+            this.usernameField.Y = 1;
+            this.usernameField.ColorScheme = this.blackOnWhite;
+            this.usernameField.Secret = false;
+            this.usernameField.Data = "usernameField";
+            this.usernameField.Text = "";
+            this.usernameField.TextAlignment = Terminal.Gui.TextAlignment.Left;
+            this.Add(this.usernameField);
+            this.lineView.Width = 20;
+            this.lineView.Height = 1;
+            this.lineView.X = Pos.Percent(50f) - 5;
+            this.lineView.Y = 2;
+            this.lineView.Data = "lineView";
+            this.lineView.TextAlignment = Terminal.Gui.TextAlignment.Left;
+            this.lineView.LineRune = '¯';
+            this.lineView.Orientation = Terminal.Gui.Graphs.Orientation.Horizontal;
+            this.Add(this.lineView);
+            this.passwordLabel.Width = 8;
+            this.passwordLabel.Height = 1;
+            this.passwordLabel.X = Pos.Left(passwdField) - 10;
+            this.passwordLabel.Y = 3;
+            this.passwordLabel.ColorScheme = this.whiteOnBlack;
+            this.passwordLabel.Data = "passwordLabel";
+            this.passwordLabel.Text = "password:";
+            this.passwordLabel.TextAlignment = Terminal.Gui.TextAlignment.Left;
+            this.Add(this.passwordLabel);
             this.passwdField.Width = 20;
             this.passwdField.Height = 1;
-            this.passwdField.X = 51;
-            this.passwdField.Y = 10;
-            this.passwdField.Secret = false;
+            this.passwdField.X = Pos.Percent(50f) - 5;
+            this.passwdField.Y = 3;
+            this.passwdField.ColorScheme = this.blackOnWhite;
+            this.passwdField.Secret = true;
             this.passwdField.Data = "passwdField";
             this.passwdField.Text = "";
             this.passwdField.TextAlignment = Terminal.Gui.TextAlignment.Left;
             this.Add(this.passwdField);
-            this.passwdLabel.Width = 8;
-            this.passwdLabel.Height = 1;
-            this.passwdLabel.X = 42;
-            this.passwdLabel.Y = 12;
-            this.passwdLabel.ColorScheme = this.whiteOnBlack;
-            this.passwdLabel.Data = "passwdLabel";
-            this.passwdLabel.Text = "password";
-            this.passwdLabel.TextAlignment = Terminal.Gui.TextAlignment.Left;
-            this.Add(this.passwdLabel);
-            this.loginField.Width = 20;
-            this.loginField.Height = 1;
-            this.loginField.X = 51;
-            this.loginField.Y = 12;
-            this.loginField.Secret = false;
-            this.loginField.Data = "loginField";
-            this.loginField.Text = "";
-            this.loginField.TextAlignment = Terminal.Gui.TextAlignment.Left;
-            this.Add(this.loginField);
+            this.lineView2.Width = 20;
+            this.lineView2.Height = 1;
+            this.lineView2.X = Pos.Percent(50f) - 5;
+            this.lineView2.Y = 4;
+            this.lineView2.Data = "lineView2";
+            this.lineView2.TextAlignment = Terminal.Gui.TextAlignment.Left;
+            this.lineView2.LineRune = '¯';
+            this.lineView2.Orientation = Terminal.Gui.Graphs.Orientation.Horizontal;
+            this.Add(this.lineView2);
             this.loginButton.Width = 9;
             this.loginButton.Height = 1;
-            this.loginButton.X = 51;
-            this.loginButton.Y = 16;
+            this.loginButton.X = Pos.Left(lineView2);
+            this.loginButton.Y = 6;
             this.loginButton.ColorScheme = this.whiteOnBlack;
             this.loginButton.Data = "loginButton";
             this.loginButton.Text = "Login";
             this.loginButton.TextAlignment = Terminal.Gui.TextAlignment.Centered;
             this.loginButton.IsDefault = false;
             this.Add(this.loginButton);
-            this.signUpButton.Width = 11;
-            this.signUpButton.Height = 1;
-            this.signUpButton.X = 51;
-            this.signUpButton.Y = 18;
-            this.signUpButton.ColorScheme = this.whiteOnBlack;
-            this.signUpButton.Data = "signUpButton";
-            this.signUpButton.Text = "Sign Up";
-            this.signUpButton.TextAlignment = Terminal.Gui.TextAlignment.Centered;
-            this.signUpButton.IsDefault = false;
-            this.Add(this.signUpButton);
+            this.exitButton.Width = 8;
+            this.exitButton.Height = 1;
+            this.exitButton.X = Pos.Left(lineView2);
+            this.exitButton.Y = 8;
+            this.exitButton.ColorScheme = this.whiteOnBlack;
+            this.exitButton.Data = "exitButton";
+            this.exitButton.Text = "Exit";
+            this.exitButton.TextAlignment = Terminal.Gui.TextAlignment.Centered;
+            this.exitButton.IsDefault = false;
+            this.Add(this.exitButton);
         }
     }
 }
