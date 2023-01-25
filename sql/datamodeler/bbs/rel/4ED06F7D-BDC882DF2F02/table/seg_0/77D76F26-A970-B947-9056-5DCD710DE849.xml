@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="77D76F26-A970-B947-9056-5DCD710DE849" name="Board">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<generatorID>E271EDBC-1DF8-84BF-96F3-DB3155561076</generatorID>
+<ownerDesignName>bbs</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="C27363E4-1384-FC2A-F499-14F22FFB54C3">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="Name" id="87308D6E-B7E1-35EE-1110-168F09219482">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:42:38 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64</dataTypeSize>
+<ownDataTypeParameters>64,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Description" id="B4D26232-6881-5D3F-F375-EC74EC79AB6A">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:42:38 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>256</dataTypeSize>
+<ownDataTypeParameters>256,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BE94427D-4D73-A017-3F27-7EADC8CE693A" name="Board_PK">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="C27363E4-1384-FC2A-F499-14F22FFB54C3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

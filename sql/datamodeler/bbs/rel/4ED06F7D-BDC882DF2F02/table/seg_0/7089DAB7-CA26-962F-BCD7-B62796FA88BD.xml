@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7089DAB7-CA26-962F-BCD7-B62796FA88BD" name="Thread">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<generatorID>0C23066B-46E6-307E-7F7D-05BBA7CD5812</generatorID>
+<ownerDesignName>bbs</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="D521BDB4-CB4B-939E-8AEA-41774AFE3D69">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="Board_ID" id="52C21033-4466-7C0A-1192-64E4B00B242D">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9877F64A-2804-107A-588D-F2C6054D9716" referredColumn="C27363E4-1384-FC2A-F499-14F22FFB54C3"/>
+</associations>
+</Column>
+<Column name="Title" id="B6A84F72-0167-5090-7834-E703A9453CEB">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:35:39 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>256</dataTypeSize>
+<ownDataTypeParameters>256,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="21185163-78BC-F1BD-D3CB-EA12E9B9E502" name="Thread_PK">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="D521BDB4-CB4B-939E-8AEA-41774AFE3D69"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E59F5A5B-3F27-DE98-2656-FB8AAD8C0A92" name="Thread_Board_FK">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<generatorID>17D54E1C-5165-2177-C00E-171D5A1F8027</generatorID>
+<ownerDesignName>bbs</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="52C21033-4466-7C0A-1192-64E4B00B242D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

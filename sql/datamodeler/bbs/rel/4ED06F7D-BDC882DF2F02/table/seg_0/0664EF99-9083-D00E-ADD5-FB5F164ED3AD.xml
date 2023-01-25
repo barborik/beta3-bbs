@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0664EF99-9083-D00E-ADD5-FB5F164ED3AD" name="Bookmark">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<generatorID>50D6E509-43B8-B9F5-22F3-094B165F764B</generatorID>
+<ownerDesignName>bbs</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="4D774E1F-1145-7DC1-6C24-E92877ECBC35">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:45:07 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Thread_ID" id="6F98AED7-95C3-5949-9009-863A5E4644B3">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B3800670-7AA2-E4A1-355B-F6B6AF50D2C1" referredColumn="D521BDB4-CB4B-939E-8AEA-41774AFE3D69"/>
+</associations>
+</Column>
+<Column name="Board_ID" id="2D132085-24D4-2119-273F-1EFCD8C9FFE1">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DD12062F-1E0D-0B68-827C-F59201DE7192" referredColumn="C27363E4-1384-FC2A-F499-14F22FFB54C3"/>
+</associations>
+</Column>
+<Column name="User_ID" id="A70486A6-1BA8-8BAC-D36F-60DEBB2F449B">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ECE8DCCE-5D1D-E574-569B-F00F5AE75B21" referredColumn="69DC21D3-32A7-12DF-BC11-A7961ED61D55"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9B1E973F-CC13-5B1F-1086-C7ABC5D6D981" name="Bookmark_PK">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:45:07 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4D774E1F-1145-7DC1-6C24-E92877ECBC35"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D976BA0D-3E72-5CA4-82A1-E75440E305DD" name="Bookmark_Thread_FK">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<generatorID>28B4373C-989A-2363-2E02-2E2E07486868</generatorID>
+<ownerDesignName>bbs</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6F98AED7-95C3-5949-9009-863A5E4644B3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E9BE6FD0-6DCB-8C41-1737-B74B18C5EC5C" name="Bookmark_Board_FK">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<generatorID>A68741AA-07D3-BC00-6286-6174CFD791D7</generatorID>
+<ownerDesignName>bbs</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2D132085-24D4-2119-273F-1EFCD8C9FFE1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="54580E87-E218-321D-6C73-DA6B074CABFA" name="Bookmark_User_FK">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<generatorID>5F551A8F-2981-A70C-5055-24160DFE3A8F</generatorID>
+<ownerDesignName>bbs</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A70486A6-1BA8-8BAC-D36F-60DEBB2F449B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

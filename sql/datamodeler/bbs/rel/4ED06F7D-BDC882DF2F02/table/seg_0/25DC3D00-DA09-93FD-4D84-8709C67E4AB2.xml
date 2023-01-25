@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="25DC3D00-DA09-93FD-4D84-8709C67E4AB2" name="Message">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<generatorID>FACF7E46-7A15-AACC-7857-F1AF0E489B13</generatorID>
+<ownerDesignName>bbs</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="7DC90125-84AC-C5F8-DC50-82804C7190C5">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:49:58 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Sender_ID" id="53C03C03-24D8-AEF9-3138-61CDE396E662">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FEA97A15-AEFB-7B82-FC34-CA50ABBCD519" referredColumn="69DC21D3-32A7-12DF-BC11-A7961ED61D55"/>
+</associations>
+</Column>
+<Column name="Receiver_ID" id="72535F63-62D8-1CD6-170F-CEB1C17DEA92">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="70A250A5-8DC4-B4D4-7E21-93E06EF84F77" referredColumn="69DC21D3-32A7-12DF-BC11-A7961ED61D55"/>
+</associations>
+</Column>
+<Column name="Content" id="7158D18C-6EBB-18EC-AA1B-F9BAC9B13E20">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:47:57 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Sent" id="E5D9E10C-095B-C6B7-1F29-754672D812F0">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:48:28 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EE69FACD-F6A2-A615-245E-02B372AB1F2E" name="Message_PK">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:49:58 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7DC90125-84AC-C5F8-DC50-82804C7190C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7FE9A850-FF58-E95C-39CA-8011A124EC9E" name="Message_User_FK">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<generatorID>817C5F56-EC56-ABD9-91EC-9150D7D6FCF9</generatorID>
+<ownerDesignName>bbs</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="72535F63-62D8-1CD6-170F-CEB1C17DEA92"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="77340ECB-FB8C-A1DF-E441-34FE9C1EE41E" name="Message_User_FKv2">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<generatorID>5D5383A5-90EE-F207-DC68-590B143566E4</generatorID>
+<ownerDesignName>bbs</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="53C03C03-24D8-AEF9-3138-61CDE396E662"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

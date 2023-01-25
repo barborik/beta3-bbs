@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B3800670-7AA2-E4A1-355B-F6B6AF50D2C1" containerWithKeyObject="0664EF99-9083-D00E-ADD5-FB5F164ED3AD" localFKIndex="D976BA0D-3E72-5CA4-82A1-E75440E305DD" name="Bookmark_Thread_FK">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<generatorID>28B4373C-989A-2363-2E02-2E2E07486868</generatorID>
+<ownerDesignName>bbs</ownerDesignName>
+<referredTableLongName>Thread</referredTableLongName>
+<arc>B485A549-6AB6-DA7A-88F5-88F9A25DB2A7</arc>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>7089DAB7-CA26-962F-BCD7-B62796FA88BD</referredTableID>
+<keyObject>21185163-78BC-F1BD-D3CB-EA12E9B9E502</keyObject>
+<referredKeyID>21185163-78BC-F1BD-D3CB-EA12E9B9E502</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

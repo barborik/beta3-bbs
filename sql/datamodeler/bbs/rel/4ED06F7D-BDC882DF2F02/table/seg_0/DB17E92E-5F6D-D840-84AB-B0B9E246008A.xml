@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DB17E92E-5F6D-D840-84AB-B0B9E246008A" name="Ban">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<generatorID>5BD966F4-4CD8-B051-539D-937604422D12</generatorID>
+<ownerDesignName>bbs</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="2248669C-8B57-1E3D-931B-33E96217B894">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:52:23 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="User_ID" id="0D778235-3094-C0E5-A0C8-1EC0FE1CE218">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C4AB9D3C-1700-78D3-1EE0-3D00A8171575" referredColumn="69DC21D3-32A7-12DF-BC11-A7961ED61D55"/>
+</associations>
+</Column>
+<Column name="Reason" id="3B94BDF0-C521-FDD6-4F18-9D38960B21C6">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:53:54 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>256</dataTypeSize>
+<ownDataTypeParameters>256,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Start" id="ED6C658C-C33A-E9CB-A08C-409F8A0D8086">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:53:25 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="End" id="FE419782-CEF7-A848-0BBF-F779CE9323BD">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:53:25 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BB571FC6-1683-F374-F74E-7629242FC67D" name="Ban_PK">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:52:23 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2248669C-8B57-1E3D-931B-33E96217B894"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="32DE4AF3-EBBA-9D63-5028-A2A3E6B799B6" name="Ban_User_FK">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<generatorID>29216CCD-9BBD-4224-1A80-C5E0D8F974D7</generatorID>
+<ownerDesignName>bbs</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0D778235-3094-C0E5-A0C8-1EC0FE1CE218"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

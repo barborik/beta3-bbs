@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="87917EA3-F3F5-0DAD-5DD2-FD05D506DD8B" name="Moderator">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<generatorID>78908B9E-B334-0F36-CBF1-470582013942</generatorID>
+<ownerDesignName>bbs</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="6716E864-8A20-B031-92C4-69804A01B243">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="User_ID" id="7ACD4000-800E-F774-068B-31C144095D3A">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="608DCA23-43AA-9D44-226E-D7E4EE33609F" referredColumn="69DC21D3-32A7-12DF-BC11-A7961ED61D55"/>
+</associations>
+</Column>
+<Column name="Board_ID" id="441D4F07-99BB-0165-C31A-A98DFB2E0769">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:41:31 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F404DBDB-A1BF-2484-372E-3B99195746F2" referredColumn="C27363E4-1384-FC2A-F499-14F22FFB54C3"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="60E65796-6079-D499-1D20-0827F4D1F0DF" name="Moderator_PK">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="6716E864-8A20-B031-92C4-69804A01B243"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4AFE8948-8C57-A37C-FFB1-541E81E43A60" name="Moderator_User_FK">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:31:01 UTC</createdTime>
+<generatorID>210C8F47-5527-AF75-1023-F8E4D61717DE</generatorID>
+<ownerDesignName>bbs</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7ACD4000-800E-F774-068B-31C144095D3A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0A23BFC4-88F0-5265-9F1A-5AA813EFD8A0" name="Moderator_Board_FK">
+<createdBy>Owner</createdBy>
+<createdTime>2023-01-24 21:41:31 UTC</createdTime>
+<ownerDesignName>bbs</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="441D4F07-99BB-0165-C31A-A98DFB2E0769"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
