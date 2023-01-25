@@ -2,7 +2,7 @@ namespace BBS
 {
     class Config
     {
-        public static string getValue(string key)
+        public static string GetValue(string key)
         {
             foreach (string line in System.IO.File.ReadLines(".bbsrc"))
             {
