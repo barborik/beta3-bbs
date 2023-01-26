@@ -4,6 +4,7 @@ namespace BBS.Page
 
     public class Page : Terminal.Gui.Window
     {
+        protected ColorScheme whiteOnBlack;
         protected ColorScheme buttonScheme;
 
         public Page()
@@ -21,6 +22,14 @@ namespace BBS.Page
                 HotNormal = new Attribute(Color.White, Color.Black),
                 Focus = new Attribute(Color.White, Color.Magenta),
                 HotFocus = new Attribute(Color.White, Color.Magenta),
+            };
+
+            whiteOnBlack = new ColorScheme()
+            {
+                Normal = new Attribute(Color.White, Color.Black),
+                HotNormal = new Attribute(Color.White, Color.Black),
+                Focus = new Attribute(Color.White, Color.Black),
+                HotFocus = new Attribute(Color.White, Color.Black),
             };
         }
     }

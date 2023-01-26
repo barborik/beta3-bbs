@@ -1,9 +1,9 @@
+using System.Security.Cryptography;
+using System.Text;
+using Terminal.Gui;
+
 namespace BBS.Page
 {
-    using System.Security.Cryptography;
-    using System.Text;
-    using Terminal.Gui;
-
     public class Login : Page
     {
         TextField username;
@@ -18,8 +18,6 @@ namespace BBS.Page
         LineView unameLine;
         LineView passwdLine;
 
-        ColorScheme inputScheme;
-
         private void InitViews()
         {
             username = new TextField("")
@@ -29,7 +27,7 @@ namespace BBS.Page
                 Width = 20,
                 Height = 1,
                 TextAlignment = TextAlignment.Left,
-                ColorScheme = inputScheme,
+                ColorScheme = whiteOnBlack,
             };
 
             password = new TextField("")
@@ -39,7 +37,7 @@ namespace BBS.Page
                 Width = 20,
                 Height = 1,
                 TextAlignment = TextAlignment.Left,
-                ColorScheme = inputScheme,
+                ColorScheme = whiteOnBlack,
                 Secret = true,
             };
 
@@ -47,12 +45,14 @@ namespace BBS.Page
             {
                 X = Pos.Center() - 15,
                 Y = 1,
+                ColorScheme = whiteOnBlack,
             };
 
             passwdLabel = new Label("password:")
             {
                 X = Pos.Center() - 15,
                 Y = 3,
+                ColorScheme = whiteOnBlack,
             };
 
             loginButton = new Button("Login")
@@ -75,6 +75,7 @@ namespace BBS.Page
                 Y = 2,
                 Width = 20,
                 LineRune = '‾',
+                ColorScheme = whiteOnBlack,
             };
 
             passwdLine = new LineView()
@@ -83,6 +84,7 @@ namespace BBS.Page
                 Y = 4,
                 Width = 20,
                 LineRune = '‾',
+                ColorScheme = whiteOnBlack,
             };
 
             this.Add(username);
@@ -112,72 +114,69 @@ namespace BBS.Page
             }
         }
 
+        private void LoginButtonController()
+        {
+            if (username.Text.Length < 3 || username.Text.Length > 32 || !username.Text.All(c => char.IsLetterOrDigit((char)c)))
+            {
+                MessageBox.ErrorQuery("", "username must be between 3 and 32 alphanumeric characters", "OK");
+                return;
+            }
+
+            if (password.Text.Length < 8)
+            {
+                MessageBox.ErrorQuery("", "password must be at least 8 characters long", "OK");
+                return;
+            }
+
+            Entity.User user = null;
+            try
+            {
+                user = BBSContext.Context.User
+                .Where(user => user.Username == ((string)username.Text))
+                .First();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("ERROR: " + e.Message);
+            }
+
+            if (user == null)
+            {
+                int sel = MessageBox.Query("",
+                String.Format("There doesn't seem to be such a user\nCreate it?", username.Text),
+                "Yes", "No");
+
+                if (sel == 1)
+                {
+                    return;
+                }
+
+                user = new Entity.User()
+                {
+                    Username = (string)username.Text,
+                    PasswordHash = sha256((string)password.Text),
+                    Joined = DateTime.Now,
+                };
+
+                BBSContext.Context.User.Add(user);
+                BBSContext.Context.SaveChanges();
+            }
+
+            Application.Run(new Home(user));
+        }
+
+        private void ExitButtonController()
+        {
+            Application.Shutdown();
+            System.Environment.Exit(0);
+        }
+
         public Login()
         {
-            inputScheme = new ColorScheme()
-            {
-                Normal = new Attribute(Color.White, Color.Black),
-                HotNormal = new Attribute(Color.White, Color.Black),
-                Focus = new Attribute(Color.White, Color.Black),
-                HotFocus = new Attribute(Color.White, Color.Black),
-            };
-
             InitViews();
 
-            exitButton.Clicked += () =>
-            {
-                Application.Shutdown();
-                System.Environment.Exit(0);
-            };
-
-            loginButton.Clicked += () =>
-            {
-                if (username.Text.Length < 3 || username.Text.Length > 32)
-                {
-                    MessageBox.Query(40, 6, "",
-                    "username must be between 3 and 32 characters", "OK");
-                    return;
-                }
-
-                if (password.Text.Length < 8)
-                {
-                    MessageBox.Query(40, 6, "",
-                    "password must be at least 8 characters long", "OK");
-                    return;
-                }
-
-                Entity.User user = null;
-                try
-                {
-                    user = BBSContext.Context.User
-                    .Where(user => user.Username == ((string)username.Text))
-                    .First();
-                }
-                catch
-                {
-                }
-
-                if (user == null)
-                {
-                    int sel = MessageBox.Query(40, 6, "",
-                    String.Format("There doesn't seem to be such a user\nCreate it?", username.Text),
-                    "Yes", "No");
-
-                    if (sel == 1)
-                    {
-                        return;
-                    }
-
-                    BBSContext.Context.User.Add(new Entity.User()
-                    {
-                        Username = (string)username.Text,
-                        PasswordHash = sha256((string)password.Text),
-                        Joined = DateTime.Now,
-                    });
-
-                    BBSContext.Context.SaveChanges();
-                }
-            };
+            exitButton.Clicked += ExitButtonController;
+            loginButton.Clicked += LoginButtonController;
         }
     }
 }
