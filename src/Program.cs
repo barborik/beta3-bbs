@@ -9,7 +9,10 @@ namespace BBS
         {
             Application.Init();
             Application.QuitKey = Key.Null;
+
             Application.Run(new Login());
+
+            Application.Shutdown();
 
             /*using (BBSContext db = new BBSContext())
             {

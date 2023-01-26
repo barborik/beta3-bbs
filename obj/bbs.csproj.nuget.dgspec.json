@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Owner\\Desktop\\bbs\\bbs.csproj": {}
+    "/home/barbo/Desktop/repos/bbs/bbs.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Owner\\Desktop\\bbs\\bbs.csproj": {
+    "/home/barbo/Desktop/repos/bbs/bbs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Owner\\Desktop\\bbs\\bbs.csproj",
+        "projectUniqueName": "/home/barbo/Desktop/repos/bbs/bbs.csproj",
         "projectName": "bbs",
-        "projectPath": "C:\\Users\\Owner\\Desktop\\bbs\\bbs.csproj",
-        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Owner\\Desktop\\bbs\\obj\\",
+        "projectPath": "/home/barbo/Desktop/repos/bbs/bbs.csproj",
+        "packagesPath": "/home/barbo/.nuget/packages/",
+        "outputPath": "/home/barbo/Desktop/repos/bbs/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/barbo/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -68,12 +68,22 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.13, 6.0.13]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[6.0.13, 6.0.13]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
         }
       }
     }

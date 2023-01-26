@@ -14,6 +14,21 @@ namespace BBS
         public DbSet<Entity.Moderator> Moderator { get; set; }
         public DbSet<Entity.Bookmark> Bookmark { get; set; }
 
+        private static BBSContext instance = null;
+
+        public static BBSContext Context
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new BBSContext();
+                }
+
+                return instance;
+            }
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             string connection = String.Format(
@@ -25,6 +40,11 @@ namespace BBS
             );
 
             optionsBuilder.UseMySql(connection, ServerVersion.AutoDetect(connection));
+        }
+
+        public static void Init()
+        {
+
         }
     }
 }
