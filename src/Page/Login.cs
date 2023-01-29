@@ -2,21 +2,21 @@ using System.Security.Cryptography;
 using System.Text;
 using Terminal.Gui;
 
-namespace BBS.Page
+namespace Beta3.Page
 {
     public class Login : Page
     {
-        TextField username;
-        TextField password;
+        private TextField username;
+        private TextField password;
 
-        Label unameLabel;
-        Label passwdLabel;
+        private Label unameLabel;
+        private Label passwdLabel;
 
-        Button loginButton;
-        Button exitButton;
+        private Button loginButton;
+        private Button exitButton;
 
-        LineView unameLine;
-        LineView passwdLine;
+        private LineView unameLine;
+        private LineView passwdLine;
 
         private void InitViews()
         {
@@ -131,7 +131,7 @@ namespace BBS.Page
             Entity.User user = null;
             try
             {
-                user = BBSContext.Context.User
+                user = Beta3Context.Context.User
                 .Where(user => user.Username == ((string)username.Text))
                 .First();
             }
@@ -158,8 +158,14 @@ namespace BBS.Page
                     Joined = DateTime.Now,
                 };
 
-                BBSContext.Context.User.Add(user);
-                BBSContext.Context.SaveChanges();
+                Beta3Context.Context.User.Add(user);
+                Beta3Context.Context.SaveChanges();
+            }
+
+            if (user.PasswordHash != sha256((string)password.Text))
+            {
+                MessageBox.ErrorQuery("", "wrong password", "OK");
+                return;
             }
 
             Application.Run(new Home(user));

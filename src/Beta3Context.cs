@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using BBS.Entity;
+using Beta3.Entity;
 
-namespace BBS
+namespace Beta3
 {
-    public class BBSContext : DbContext
+    public class Beta3Context : DbContext
     {
         public DbSet<Entity.User> User { get; set; }
         public DbSet<Entity.Message> Message { get; set; }
@@ -14,15 +14,15 @@ namespace BBS
         public DbSet<Entity.Moderator> Moderator { get; set; }
         public DbSet<Entity.Bookmark> Bookmark { get; set; }
 
-        private static BBSContext instance = null;
+        private static Beta3Context instance = null;
 
-        public static BBSContext Context
+        public static Beta3Context Context
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new BBSContext();
+                    instance = new Beta3Context();
                 }
 
                 return instance;

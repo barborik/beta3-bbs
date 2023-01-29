@@ -1,4 +1,4 @@
-namespace BBS.Entity
+namespace Beta3.Entity
 {
     public class Moderator
     {

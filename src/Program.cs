@@ -1,7 +1,7 @@
 ﻿using Terminal.Gui;
-using BBS.Page;
+using Beta3.Page;
 
-namespace BBS
+namespace Beta3
 {
     public class Program
     {
@@ -10,11 +10,11 @@ namespace BBS
             Application.Init();
             Application.QuitKey = Key.Null;
 
-            Application.Run(new Login());
+            Application.Run<Login>();
 
             Application.Shutdown();
 
-            /*using (BBSContext db = new BBSContext())
+            /*using (BBSContext db = new Beta3Context())
             {
                 User user = new User { Username = "sysop", PasswordHash = "password", Joined = DateTime.Now };
 

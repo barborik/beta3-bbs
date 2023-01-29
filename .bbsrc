@@ -1,4 +1,4 @@
 server=localhost
 user=root
-password=root
-database=BBS
+password=
+database=beta3

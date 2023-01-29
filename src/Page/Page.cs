@@ -1,4 +1,4 @@
-namespace BBS.Page
+namespace Beta3.Page
 {
     using Terminal.Gui;
 

@@ -1,4 +1,4 @@
-namespace BBS
+namespace Beta3
 {
     class Config
     {
