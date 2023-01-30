@@ -21,7 +21,7 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <isSurrogateColumn>true</isSurrogateColumn>
 </Column>
-<Column name="User_ID" id="7ACD4000-800E-F774-068B-31C144095D3A">
+<Column name="UserID" id="7ACD4000-800E-F774-068B-31C144095D3A">
 <createdBy>Owner</createdBy>
 <createdTime>2023-01-24 21:31:01 UTC</createdTime>
 <ownerDesignName>bbs</ownerDesignName>
@@ -35,7 +35,7 @@
 <colAssociation fkAssociation="608DCA23-43AA-9D44-226E-D7E4EE33609F" referredColumn="69DC21D3-32A7-12DF-BC11-A7961ED61D55"/>
 </associations>
 </Column>
-<Column name="Board_ID" id="441D4F07-99BB-0165-C31A-A98DFB2E0769">
+<Column name="BoardID" id="441D4F07-99BB-0165-C31A-A98DFB2E0769">
 <createdBy>Owner</createdBy>
 <createdTime>2023-01-24 21:41:31 UTC</createdTime>
 <ownerDesignName>bbs</ownerDesignName>

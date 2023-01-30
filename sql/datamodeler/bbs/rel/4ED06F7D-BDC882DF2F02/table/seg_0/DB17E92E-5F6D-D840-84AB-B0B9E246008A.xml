@@ -18,7 +18,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="User_ID" id="0D778235-3094-C0E5-A0C8-1EC0FE1CE218">
+<Column name="UserID" id="0D778235-3094-C0E5-A0C8-1EC0FE1CE218">
 <createdBy>Owner</createdBy>
 <createdTime>2023-01-24 21:31:01 UTC</createdTime>
 <ownerDesignName>bbs</ownerDesignName>

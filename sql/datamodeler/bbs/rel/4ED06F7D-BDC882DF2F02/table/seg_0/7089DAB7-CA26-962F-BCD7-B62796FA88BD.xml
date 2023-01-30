@@ -21,7 +21,7 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <isSurrogateColumn>true</isSurrogateColumn>
 </Column>
-<Column name="Board_ID" id="52C21033-4466-7C0A-1192-64E4B00B242D">
+<Column name="BoardID" id="52C21033-4466-7C0A-1192-64E4B00B242D">
 <createdBy>Owner</createdBy>
 <createdTime>2023-01-24 21:31:01 UTC</createdTime>
 <ownerDesignName>bbs</ownerDesignName>

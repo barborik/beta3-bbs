@@ -18,7 +18,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="User_ID" id="B920544A-B029-A44F-2366-8AF0CFD212F3">
+<Column name="UserID" id="B920544A-B029-A44F-2366-8AF0CFD212F3">
 <createdBy>Owner</createdBy>
 <createdTime>2023-01-24 21:31:01 UTC</createdTime>
 <ownerDesignName>bbs</ownerDesignName>
@@ -32,7 +32,7 @@
 <colAssociation fkAssociation="5133642D-3C78-993C-3905-052570473AEB" referredColumn="69DC21D3-32A7-12DF-BC11-A7961ED61D55"/>
 </associations>
 </Column>
-<Column name="Thread_ID" id="4F1FBF18-A8B8-5234-5B7B-23B14DCF81D3">
+<Column name="ThreadID" id="4F1FBF18-A8B8-5234-5B7B-23B14DCF81D3">
 <createdBy>Owner</createdBy>
 <createdTime>2023-01-24 21:31:01 UTC</createdTime>
 <ownerDesignName>bbs</ownerDesignName>

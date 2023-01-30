@@ -18,7 +18,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Sender_ID" id="53C03C03-24D8-AEF9-3138-61CDE396E662">
+<Column name="SenderID" id="53C03C03-24D8-AEF9-3138-61CDE396E662">
 <createdBy>Owner</createdBy>
 <createdTime>2023-01-24 21:31:01 UTC</createdTime>
 <ownerDesignName>bbs</ownerDesignName>
@@ -32,7 +32,7 @@
 <colAssociation fkAssociation="FEA97A15-AEFB-7B82-FC34-CA50ABBCD519" referredColumn="69DC21D3-32A7-12DF-BC11-A7961ED61D55"/>
 </associations>
 </Column>
-<Column name="Receiver_ID" id="72535F63-62D8-1CD6-170F-CEB1C17DEA92">
+<Column name="ReceiverID" id="72535F63-62D8-1CD6-170F-CEB1C17DEA92">
 <createdBy>Owner</createdBy>
 <createdTime>2023-01-24 21:31:01 UTC</createdTime>
 <ownerDesignName>bbs</ownerDesignName>

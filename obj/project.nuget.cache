@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NC1mkQVb6TUt867LNC0d9U2o6caM5quIyKntMEoUc+NexodpgKOmRCdV1KGuAc8l5iK8PMEQ+F39x87XAnLPig==",
+  "dgSpecHash": "nz6RIpN45ZSRio+Uyg7oS5SSBiH9waYyKZ6vgoeTPptSa8rsButypflXl2OTyy8Lph5opw0TK+K8eluhzM0ubg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Owner\\Desktop\\beta3-bbs\\beta3-bss.csproj",
   "expectedPackageFiles": [
@@ -27,7 +27,6 @@
     "C:\\Users\\Owner\\.nuget\\packages\\nstack.core\\1.0.7\\nstack.core.1.0.7.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\7.0.0\\pomelo.entityframeworkcore.mysql.7.0.0.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
-    "C:\\Users\\Owner\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
