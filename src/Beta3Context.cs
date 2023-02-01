@@ -41,10 +41,5 @@ namespace Beta3
 
             optionsBuilder.UseMySql(connection, ServerVersion.AutoDetect(connection));
         }
-
-        public static void Init()
-        {
-
-        }
     }
 }

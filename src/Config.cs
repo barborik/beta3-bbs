@@ -6,7 +6,7 @@ namespace Beta3
         {
             foreach (string line in System.IO.File.ReadLines(".bbsrc"))
             {
-                string[] pair = line.Split('=');
+                string[] pair = line.Split('=', 2);
 
                 if (pair[0] == key)
                 {
