@@ -19,8 +19,10 @@ namespace Beta3.Page
                         Application.Run(new BoardsList());
                         break;
                     case Key.D2:
+                        Application.Run(new MessagesList());
                         break;
                     case Key.D3:
+                        Application.Run(new UserList());
                         break;
                     case Key.D4:
                         this.RequestStop();

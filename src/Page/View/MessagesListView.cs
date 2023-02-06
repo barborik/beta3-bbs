@@ -2,25 +2,22 @@ using Terminal.Gui;
 
 namespace Beta3.Page
 {
-    public partial class Board : Page
+    public partial class MessagesList : Page
     {
-        private View threadForm;
-        private Label titleLabel;
-        private Label contentLabel;
-        private TextField titleField;
-        private TextView contentField;
-        private Button postButton;
+        private View messageForm;
+        private Label unameLabel;
+        private Label messageLabel;
+        private TextField unameField;
+        private TextView messageField;
+        private Button sendButton;
 
-        private View next;
         private View prev;
-        private View threads;
+        private View next;
+        private View contacts;
 
-        private int page;
-        private List<Entity.Thread> threadsList;
+        private int page = 0, width, height, perPage;
 
-        private int width, height, perPage;
-
-        private string ThreadsListString()
+        private string ContactsListString()
         {
             char c = 'A';
             string text = "";
@@ -28,7 +25,7 @@ namespace Beta3.Page
             width = 0;
             height = 0;
 
-            threadsList.Clear();
+            contactsList.Clear();
 
             perPage = Application.Top.Bounds.Bottom - 22;
             if (perPage > 'Z' - 'A' + 1)
@@ -36,25 +33,24 @@ namespace Beta3.Page
                 perPage = 'Z' - 'A' + 1;
             }
 
-            threads.RemoveAll();
+            contacts.RemoveAll();
 
             for (int i = 0; i < perPage; i++)
             {
-                Entity.Thread thread;
+                Entity.User user;
                 try
                 {
-                    thread = Beta3Context.Context.Thread
-                    .Where(t => t.BoardID == board.ID).ToList()[page * perPage + i];
+                    user = Beta3Context.Context.User.ToList()[page * perPage + i];
                 }
                 catch
                 {
                     continue;
                 }
 
-                string listing = String.Format("[{0}] {1}\n", c, thread.Title);
+                string listing = String.Format("[{0}] {1}\n", c, user.Username);
                 text += listing;
 
-                threadsList.Add(thread);
+                contactsList.Add(user);
 
                 View select = new View()
                 {
@@ -65,7 +61,7 @@ namespace Beta3.Page
                     Height = 1,
                     ColorScheme = redOnBlack,
                 };
-                threads.Add(select);
+                contacts.Add(select);
 
                 if (listing.Length > width)
                 {
@@ -103,24 +99,24 @@ namespace Beta3.Page
                 TextAlignment = TextAlignment.Centered,
             };
 
-            threads = new View()
+            contacts = new View()
             {
                 Y = 16,
                 TextAlignment = TextAlignment.Left,
                 CanFocus = true,
                 ColorScheme = whiteOnBlack,
             };
-            threads.Text = ThreadsListString();
-            threads.X = Pos.Center() - width / 2;
-            threads.Width = width;
-            threads.Height = height;
+            contacts.Text = ContactsListString();
+            contacts.X = Pos.Center() - width / 2;
+            contacts.Width = width;
+            contacts.Height = height;
 
             this.Add(next);
             this.Add(prev);
-            this.Add(threads);
+            this.Add(contacts);
 
-            // THREAD FORM
-            threadForm = new View()
+            // FORM
+            messageForm = new View()
             {
                 X = Pos.Center(),
                 Y = 1,
@@ -128,27 +124,27 @@ namespace Beta3.Page
                 Height = 13,
                 Border = new Border()
                 {
-                    Title = "Start a New Thread",
+                    Title = "Send a New Message",
                     BorderStyle = BorderStyle.Single,
                 },
                 ColorScheme = whiteOnBlack,
             };
 
-            titleLabel = new Label()
+            unameLabel = new Label()
             {
                 X = 3,
                 Y = 1,
-                Text = "Title",
+                Text = "To",
             };
 
-            contentLabel = new Label()
+            messageLabel = new Label()
             {
                 X = 3,
                 Y = 4,
                 Text = "Content",
             };
 
-            titleField = new TextField()
+            unameField = new TextField()
             {
                 X = 3,
                 Y = 2,
@@ -161,7 +157,7 @@ namespace Beta3.Page
                 },
             };
 
-            contentField = new TextView()
+            messageField = new TextView()
             {
                 X = 3,
                 Y = 5,
@@ -176,22 +172,22 @@ namespace Beta3.Page
                 AllowsTab = false,
             };
 
-            postButton = new Button()
+            sendButton = new Button()
             {
                 X = 3,
                 Y = 12,
                 Width = 4,
                 Height = 1,
-                Text = "Post",
+                Text = "Send",
                 ColorScheme = buttonScheme,
             };
 
-            this.Add(threadForm);
-            threadForm.Add(titleLabel);
-            threadForm.Add(titleField);
-            threadForm.Add(contentLabel);
-            threadForm.Add(contentField);
-            threadForm.Add(postButton);
+            this.Add(messageForm);
+            messageForm.Add(unameLabel);
+            messageForm.Add(unameField);
+            messageForm.Add(messageLabel);
+            messageForm.Add(messageField);
+            messageForm.Add(sendButton);
         }
     }
 }

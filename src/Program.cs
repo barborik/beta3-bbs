@@ -7,10 +7,14 @@ namespace Beta3
     {
         static void Main(string[] args)
         {
-            Application.Init();
+            /*Application.Init();
+            Application.Run(new Page.Thread(new Entity.Thread()));
+            Application.Shutdown();
+            return;*/
+            /*Application.Init();
             Application.Run(new Board(new Entity.Board()));
             Application.Shutdown();
-            return;
+            return;*/
             /*Application.Init();
             Application.Run(new Boards());
             Application.Shutdown();

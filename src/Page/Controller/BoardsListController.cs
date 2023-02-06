@@ -28,6 +28,8 @@ namespace Beta3.Page
 
                             boards.Text = BoardsListString();
                             boards.Redraw(boards.Bounds);
+                            boards.Width = width;
+                            boards.Height = Height;
                         }
                         break;
                     case Key.PageDown:
@@ -37,6 +39,8 @@ namespace Beta3.Page
 
                             boards.Text = BoardsListString();
                             boards.Redraw(boards.Bounds);
+                            boards.Width = width;
+                            boards.Height = Height;
                         }
                         break;
                 }
