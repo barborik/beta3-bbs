@@ -7,6 +7,8 @@ namespace Beta3
     {
         static void Main(string[] args)
         {
+            new UnitTest.UnitTest();
+            return;
             /*Application.Init();
             Application.Run(new Page.Thread(new Entity.Thread()));
             Application.Shutdown();
