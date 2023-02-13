@@ -1,5 +1,5 @@
 server=localhost
 user=root
-password=root
+password=
 database=beta3
 motd=Welcome to beta3 Bulletin Board System!

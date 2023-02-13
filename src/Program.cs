@@ -26,7 +26,10 @@ namespace Beta3
 
             try
             {
-                Beta3Context.Context.Database.CanConnect();
+                if (!Beta3Context.Context.Database.CanConnect())
+                {
+                    throw new Exception();
+                }
             }
             catch
             {

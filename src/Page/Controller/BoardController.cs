@@ -30,6 +30,9 @@ namespace Beta3.Page
 
             Beta3Context.Context.Post.Add(post);
             Beta3Context.Context.SaveChanges();
+
+            this.RequestStop();
+            Application.Run(new Board(board));
         }
 
         private void InitControllers()

@@ -1193,19 +1193,19 @@
     ]
   },
   "packageFolders": {
-    "/home/barbo/.nuget/packages/": {}
+    "C:\\Users\\Owner\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/barbo/Desktop/repos/beta3-bbs/beta3-bss.csproj",
+      "projectUniqueName": "C:\\Users\\Owner\\Desktop\\beta3-bbs\\beta3-bss.csproj",
       "projectName": "beta3-bss",
-      "projectPath": "/home/barbo/Desktop/repos/beta3-bbs/beta3-bss.csproj",
-      "packagesPath": "/home/barbo/.nuget/packages/",
-      "outputPath": "/home/barbo/Desktop/repos/beta3-bbs/obj/",
+      "projectPath": "C:\\Users\\Owner\\Desktop\\beta3-bbs\\beta3-bss.csproj",
+      "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Owner\\Desktop\\beta3-bbs\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/barbo/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -1259,18 +1259,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.2, 7.0.2]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

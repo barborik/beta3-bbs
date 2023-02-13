@@ -25,7 +25,16 @@ namespace Beta3.Page
                         Application.Run(new UserList());
                         break;
                     case Key.D4:
+                        Application.Run(new Bookmarks());
+                        break;
+                    case Key.D5:
                         this.RequestStop();
+                        break;
+                    case Key.X:
+                        if (user.Username == "sysop")
+                        {
+                            Application.Run(new SysopMenu());
+                        }
                         break;
                 }
             };

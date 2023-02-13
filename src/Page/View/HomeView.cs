@@ -68,11 +68,11 @@ namespace Beta3.Page
 
             menu = new View()
             {
-                Text = "\n   [1] Boards\n   [2] Messages\n   [3] Users List\n   [4] Log Out\n",
+                Text = "\n   [1] Boards\n   [2] Messages\n   [3] Users List\n   [4] Bookmarks\n   [5] Log Out\n\n   [6] Sysop Menu",
                 X = Pos.Center(),
-                Y = Pos.Center() - 5,
+                Y = Pos.Center() - 6,
                 Width = 20,
-                Height = 6,
+                Height = 8,
                 ColorScheme = new ColorScheme()
                 {
                     Normal = new Terminal.Gui.Attribute(Color.BrightBlue, Color.Black),
@@ -92,7 +92,7 @@ namespace Beta3.Page
             {
                 Text = "1",
                 X = Pos.Center() - 6,
-                Y = Pos.Center() - 4,
+                Y = Pos.Center() - 5,
                 Width = 1,
                 Height = 1,
                 ColorScheme = redOnBlack,
@@ -102,7 +102,7 @@ namespace Beta3.Page
             {
                 Text = "2",
                 X = Pos.Center() - 6,
-                Y = Pos.Center() - 3,
+                Y = Pos.Center() - 4,
                 Width = 1,
                 Height = 1,
                 ColorScheme = redOnBlack,
@@ -112,7 +112,7 @@ namespace Beta3.Page
             {
                 Text = "3",
                 X = Pos.Center() - 6,
-                Y = Pos.Center() - 2,
+                Y = Pos.Center() - 3,
                 Width = 1,
                 Height = 1,
                 ColorScheme = redOnBlack,
@@ -122,7 +122,27 @@ namespace Beta3.Page
             {
                 Text = "4",
                 X = Pos.Center() - 6,
+                Y = Pos.Center() - 2,
+                Width = 1,
+                Height = 1,
+                ColorScheme = redOnBlack,
+            };
+
+            View select5 = new View()
+            {
+                Text = "5",
+                X = Pos.Center() - 6,
                 Y = Pos.Center() - 1,
+                Width = 1,
+                Height = 1,
+                ColorScheme = redOnBlack,
+            };
+
+            View select6 = new View()
+            {
+                Text = "X",
+                X = Pos.Center() - 6,
+                Y = Pos.Center() + 1,
                 Width = 1,
                 Height = 1,
                 ColorScheme = redOnBlack,
@@ -139,6 +159,8 @@ namespace Beta3.Page
             this.Add(select2);
             this.Add(select3);
             this.Add(select4);
+            this.Add(select5);
+            this.Add(select6);
         }
     }
 }

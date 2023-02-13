@@ -21,18 +21,13 @@ namespace Beta3.Page
                 Width = Dim.Fill(),
                 Height = Dim.Fill() - 10,
                 ColorScheme = whiteOnBlack,
-                ContentOffset = new Point()
-                {
-                    X = 0,
-                    Y = 0,
-                },
             };
 
             List<Entity.Message> messages = Beta3Context.Context.Message
             .Where(m => m.ReceiverID == Home.user.ID).Where(m => m.SenderID == this.from.ID)
             .Concat(Beta3Context.Context.Message
             .Where(m => m.SenderID == Home.user.ID).Where(m => m.ReceiverID == this.from.ID))
-            .OrderBy(m => m.Sent).ToList();
+            .OrderByDescending(m => m.Sent).ToList();
 
             foreach (Entity.Message message in messages)
             {
@@ -60,7 +55,7 @@ namespace Beta3.Page
 
             container.ContentSize = new Size()
             {
-                Width = Application.Top.Bounds.Right - 3,//this.Bounds.Right,
+                Width = Application.Top.Bounds.Right - 3,
                 Height = height,
             };
 

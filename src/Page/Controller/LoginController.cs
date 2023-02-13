@@ -79,6 +79,16 @@ namespace Beta3.Page
                 return;
             }
 
+            try
+            {
+                if (Beta3Context.Context.Ban.Any(b => b.UserID == user.ID && b.End > DateTime.Now))
+                {
+                    MessageBox.ErrorQuery("", "you have been banned", "OK");
+                    return;
+                }
+            }
+            catch { }
+
             Application.Run(new Home(user));
         }
 

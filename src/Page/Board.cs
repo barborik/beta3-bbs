@@ -4,8 +4,8 @@ namespace Beta3.Page
 {
     public partial class Board : Page
     {
-        int nthreads;
-        Entity.Board board;
+        private int nthreads;
+        private Entity.Board board;
 
         public Board(Entity.Board board)
         {

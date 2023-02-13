@@ -2,18 +2,15 @@ using Terminal.Gui;
 
 namespace Beta3.Page
 {
-    public partial class BoardsList : Page
+    public partial class Bookmarks : Page
     {
-        private View next;
         private View prev;
-        private View boards;
+        private View next;
+        private View bookmarks;
 
-        private int page;
-        private List<Entity.Board> boardsList;
+        private int page = 0, width, height, perPage;
 
-        private int width, height, perPage;
-
-        private string BoardsListString()
+        private string BookmarksListString()
         {
             char c = 'A';
             string text = "";
@@ -21,7 +18,7 @@ namespace Beta3.Page
             width = 0;
             height = 0;
 
-            boardsList.Clear();
+            bookmarksList.Clear();
 
             perPage = Application.Top.Bounds.Bottom - 8;
             if (perPage > 'Z' - 'A' + 1)
@@ -29,24 +26,33 @@ namespace Beta3.Page
                 perPage = 'Z' - 'A' + 1;
             }
 
-            boards.RemoveAll();
+            bookmarks.RemoveAll();
 
             for (int i = 0; i < perPage; i++)
             {
-                Entity.Board board;
+                Entity.Bookmark bookmark;
                 try
                 {
-                    board = Beta3Context.Context.Board.ToList()[page * perPage + i];
+                    bookmark = Beta3Context.Context.Bookmark.Where(b => b.UserID == Home.user.ID).ToList()[page * perPage + i];
                 }
                 catch
                 {
                     continue;
                 }
 
-                string listing = String.Format("[{0}] {1}\n", c, board.Name);
+                string listing;
+                if (bookmark.BoardID != null)
+                {
+                    listing = String.Format("[{0}] Board - {1}\n", c, Beta3Context.Context.Board.Where(b => b.ID == bookmark.BoardID).First().Name);
+                }
+                else
+                {
+                    listing = String.Format("[{0}] Thread - {1}\n", c, Beta3Context.Context.Thread.Where(t => t.ID == bookmark.ThreadID).First().Title);
+                }
+
                 text += listing;
 
-                boardsList.Add(board);
+                bookmarksList.Add(bookmark);
 
                 View select = new View()
                 {
@@ -57,7 +63,7 @@ namespace Beta3.Page
                     Height = 1,
                     ColorScheme = redOnBlack,
                 };
-                boards.Add(select);
+                bookmarks.Add(select);
 
                 if (listing.Length > width)
                 {
@@ -75,8 +81,8 @@ namespace Beta3.Page
             prev = new View()
             {
                 X = Pos.Center(),
-                Y = 0,
-                Width = 12,
+                Y = Pos.Top(this),
+                Width = 16,
                 Height = 2,
                 Text = "↑\n[Page Up]",
                 ColorScheme = whiteOnBlack,
@@ -87,29 +93,28 @@ namespace Beta3.Page
             {
                 X = Pos.Center(),
                 Y = Pos.Bottom(this) - 4,
-                Width = 12,
+                Width = 16,
                 Height = 2,
                 Text = "[Page Down]\n↓",
                 ColorScheme = whiteOnBlack,
                 TextAlignment = TextAlignment.Centered,
             };
 
-            boards = new View()
+            bookmarks = new View()
             {
-                X = Pos.Center(),
                 Y = Pos.Center(),
-                Width = width,
-                Height = height,
                 TextAlignment = TextAlignment.Left,
+                CanFocus = true,
                 ColorScheme = whiteOnBlack,
             };
-            boards.Text = BoardsListString();
-            boards.Width = width;
-            boards.Height = height;
+            bookmarks.Text = BookmarksListString();
+            bookmarks.X = Pos.Center() - width / 2;
+            bookmarks.Width = width;
+            bookmarks.Height = height;
 
-            this.Add(prev);
             this.Add(next);
-            this.Add(boards);
+            this.Add(prev);
+            this.Add(bookmarks);
         }
     }
 }

@@ -21,6 +21,9 @@ namespace Beta3.Page
 
             Beta3Context.Context.Message.Add(message);
             Beta3Context.Context.SaveChanges();
+
+            this.RequestStop();
+            Application.Run(new Messages(from));
         }
 
         private void InitControllers()

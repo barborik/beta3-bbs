@@ -9,6 +9,11 @@ namespace Beta3.Page
         private View postForm;
         private TextView postField;
         private Button postButton;
+        private Button bookmarkThread;
+        private Button bookmarkBoard;
+
+        private bool removeBoardBookmark;
+        private bool removeThreadBookmark;
 
 
         private void InitViews()
@@ -106,6 +111,58 @@ namespace Beta3.Page
             postForm.Add(postField);
             postForm.Add(postButton);
             this.Add(postForm);
+
+            // BOOKMARK
+            removeBoardBookmark = false;
+            string boardText = "Bookmark Board";
+
+            try
+            {
+                if (Beta3Context.Context.Bookmark.Where(b => b.UserID == Home.user.ID && b.BoardID == thread.BoardID).First() != null)
+                {
+                    boardText = "Remove Board Bookmark";
+                    removeBoardBookmark = true;
+                }
+            }
+            catch { }
+
+            bookmarkBoard = new Button()
+            {
+                X = 0,
+                Y = Application.Top.Bounds.Bottom - 4,
+                Width = boardText.Length,
+                Height = 1,
+                Text = boardText,
+                ColorScheme = buttonScheme,
+            };
+
+
+            string threadText = "Bookmark Thread";
+            removeThreadBookmark = false;
+
+            try
+            {
+                if (Beta3Context.Context.Bookmark.Where(b => b.UserID == Home.user.ID && b.ThreadID == thread.ID).First() != null)
+                {
+                    threadText = "Remove Thread Bookmark";
+                    removeThreadBookmark = true;
+                }
+            }
+            catch
+            { }
+
+            bookmarkThread = new Button()
+            {
+                X = 0,
+                Y = Application.Top.Bounds.Bottom - 3,
+                Width = threadText.Length,
+                Height = 1,
+                Text = threadText,
+                ColorScheme = buttonScheme,
+            };
+
+            this.Add(bookmarkBoard);
+            this.Add(bookmarkThread);
         }
     }
 }
